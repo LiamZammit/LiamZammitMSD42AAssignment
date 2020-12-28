@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705542471213316833}
   - component: {fileID: 7197596633246980814}
+  - component: {fileID: 6029902195284204790}
   m_Layer: 0
   m_Name: Bike
   m_TagString: Untagged
@@ -82,3 +83,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6029902195284204790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147823119301831854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6e854951108c948b2b060a69317926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  objectMoveSpeed: 2
