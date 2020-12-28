@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2890282935265136857}
   - component: {fileID: 4957040478939263780}
+  - component: {fileID: -6550293074299557279}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6550293074299557279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728745550522364763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6e854951108c948b2b060a69317926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  objectMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: eb6ca22b130cf38439dca8bb80f2163f, type: 2}

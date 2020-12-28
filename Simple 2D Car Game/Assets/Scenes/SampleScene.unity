@@ -123,6 +123,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &442974702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3147823119301831854, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
+  m_PrefabInstance: {fileID: 2291309163418535377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &442974703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442974702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6e854951108c948b2b060a69317926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 8221983722228811045}
+  - {fileID: 8221983722228811044}
+  - {fileID: 8221983722228811043}
+  - {fileID: 8221983722228811042}
+  - {fileID: 8221983722228811041}
+  objectMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: b7db4dacad4d7414b96f95bb54d24914, type: 2}
 --- !u!1001 &716929796011919644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,6 +286,7 @@ MonoBehaviour:
   - {fileID: 7935941335008678164}
   - {fileID: 7935941335008678163}
   objectMoveSpeed: 3
+  waveConfig: {fileID: 11400000, guid: 973f3ca61d1c1fc4db4acc52c4eb0edd, type: 2}
 --- !u!1001 &2291309163418535377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,11 +296,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 705542471213316833, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.39
+      value: 4.79
       objectReference: {fileID: 0}
     - target: {fileID: 705542471213316833, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.8
+      value: 6.51
       objectReference: {fileID: 0}
     - target: {fileID: 705542471213316833, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -315,34 +341,6 @@ PrefabInstance:
     - target: {fileID: 3147823119301831854, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
       propertyPath: m_Name
       value: Bike
-      objectReference: {fileID: 0}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: waypoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: waypoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 8221983722228811045}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: waypoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 8221983722228811044}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: waypoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 8221983722228811043}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: waypoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 8221983722228811042}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: waypoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 8221983722228811041}
-    - target: {fileID: 6029902195284204790, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
-      propertyPath: objectMoveSpeed
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 971b166bae8fabb44b1a2196c0da43c8, type: 3}
@@ -484,6 +482,7 @@ MonoBehaviour:
   - {fileID: 7568777923471692399}
   - {fileID: 7568777923471692398}
   objectMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: eb6ca22b130cf38439dca8bb80f2163f, type: 2}
 --- !u!1001 &4576726386182817096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,6 +564,7 @@ MonoBehaviour:
   - {fileID: 8107538311451491458}
   - {fileID: 8107538311451491457}
   objectMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: 42efd4678ff9de84fa9c67440619237d, type: 2}
 --- !u!1001 &4816575905043743934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9096690492685515921, guid: 39953eebe2c8b0f46be2c408aef0b02b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 9096690492685515921, guid: 39953eebe2c8b0f46be2c408aef0b02b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,6 +883,7 @@ MonoBehaviour:
   - {fileID: 8716122997785714249}
   - {fileID: 8716122997785714248}
   objectMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: 7e1e471a333277a4d884a99d2a992237, type: 2}
 --- !u!1001 &8107538311451491456
 PrefabInstance:
   m_ObjectHideFlags: 0

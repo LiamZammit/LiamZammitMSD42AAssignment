@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4701137765923909333}
   - component: {fileID: 7593132771810734197}
+  - component: {fileID: -5797552871142561585}
   m_Layer: 0
   m_Name: Roadblock
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5797552871142561585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803977619187639594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6e854951108c948b2b060a69317926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  objectMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: 42efd4678ff9de84fa9c67440619237d, type: 2}
