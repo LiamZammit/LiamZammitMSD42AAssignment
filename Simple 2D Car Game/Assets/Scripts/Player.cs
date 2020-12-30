@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 7f;
+    [SerializeField] float Health = 100f;
+
     float xMin, xMax, yMin, yMax;
     float padding = 0.5f;
 

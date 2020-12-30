@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 8728745550522364763, guid: 427f855437681e64a88dd6f8fa10d32f, type: 3}
   pathPrefab: {fileID: 5868657998866138053, guid: 4273fd4bf37bbd543b5fde9fe9c2192c, type: 3}
-  timeBetweenSpawns: 0.5
+  timeBetweenSpawns: 1
   spawnRandomFactor: 0.3
   numberOfObjects: 5
-  objectMoveSpeed: 2
+  objectMoveSpeed: 3

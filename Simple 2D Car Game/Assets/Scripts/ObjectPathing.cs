@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectPathing : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float objectMoveSpeed = 2f;
+    
 
     [SerializeField] WaveConfig waveConfig;
 
@@ -37,7 +37,7 @@ public class ObjectPathing : MonoBehaviour
             //make sure that z axis = 0
             targetPosition.z = 0f;
 
-            var objectMovement = objectMoveSpeed * Time.deltaTime;
+            var objectMovement = waveConfig.GetObjectMoveSpeed() * Time.deltaTime;
 
             //move object from current position to targetPosition, at ObjectMovementSpeed
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, objectMovement);
@@ -55,4 +55,10 @@ public class ObjectPathing : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void setWaveConfig(WaveConfig waveConfigToSet)
+    {
+        waveConfig = waveConfigToSet;    
+    }
+
 }
