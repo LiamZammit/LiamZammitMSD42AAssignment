@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4701137765923909333}
   - component: {fileID: 7593132771810734197}
   - component: {fileID: -5797552871142561585}
+  - component: {fileID: -5215050364026176545}
   m_Layer: 0
   m_Name: Roadblock
   m_TagString: Untagged
@@ -96,5 +97,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  objectMoveSpeed: 2
   waveConfig: {fileID: 11400000, guid: 42efd4678ff9de84fa9c67440619237d, type: 2}
+--- !u!114 &-5215050364026176545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803977619187639594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a8de5cc99c2534e9f872c56aa24168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 3
+  objectLaserPrefab: {fileID: 2026552196273684204, guid: fa6652fe445bd264ba7d33e8aee8ff4a, type: 3}
+  objectLaserSpeed: 1

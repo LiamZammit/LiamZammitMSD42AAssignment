@@ -6,10 +6,28 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 7f;
-    [SerializeField] float Health = 100f;
+    [SerializeField] float Health = 10f;
 
     float xMin, xMax, yMin, yMax;
     float padding = 0.5f;
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        ProcessHit(dmgDealer);
+
+    }
+
+    private void ProcessHit(DamageDealer dmgDealer)
+    {
+        Health -= dmgDealer.GetDamage();
+
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

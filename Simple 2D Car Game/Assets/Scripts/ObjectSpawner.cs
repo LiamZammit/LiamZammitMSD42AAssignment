@@ -6,17 +6,19 @@ public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigList;
 
+    [SerializeField] bool looping = false;
+
     //start from wave 0
     int startingWave = 0;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        //set the current wave to Wave 1 [position 0 in List
-        var currentWave = waveConfigList[startingWave];
-
-        StartCoroutine(SpawnAllWaves());
-
+        do
+        {
+            yield return StartCoroutine(SpawnAllWaves());
+        }
+        while (looping);
     }
 
     // Update is called once per frame
