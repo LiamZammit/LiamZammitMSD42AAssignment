@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 194803401766263039}
   - component: {fileID: 1494786253208795862}
   - component: {fileID: -1860522839466319585}
+  - component: {fileID: 6556452894370643909}
+  - component: {fileID: 725750638980643774}
+  - component: {fileID: 4747634752809638091}
   m_Layer: 0
   m_Name: PoliceCar
   m_TagString: Untagged
@@ -115,3 +118,81 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   objectLaserPrefab: {fileID: 2026552196273684204, guid: fa6652fe445bd264ba7d33e8aee8ff4a, type: 3}
   objectLaserSpeed: 1
+--- !u!50 &6556452894370643909
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197463924685101521}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &725750638980643774
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197463924685101521}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.25, y: 2.25}
+    newSize: {x: 2.25, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.385, y: -0.345}
+      - {x: 0.385, y: 0.155}
+      - {x: 0.39499998, y: 0.315}
+      - {x: 0.39499998, y: 0.685}
+      - {x: 0.255, y: 0.805}
+      - {x: -0.265, y: 0.805}
+      - {x: -0.39499998, y: 0.675}
+      - {x: -0.39499998, y: 0.325}
+      - {x: -0.385, y: 0.16499999}
+      - {x: -0.39499998, y: -0.33499998}
+      - {x: -0.39499998, y: -0.345}
+      - {x: -0.385, y: -0.625}
+      - {x: -0.205, y: -0.765}
+      - {x: -0.105, y: -0.805}
+      - {x: 0.065, y: -0.805}
+      - {x: 0.145, y: -0.79499996}
+      - {x: 0.33499998, y: -0.685}
+      - {x: 0.39499998, y: -0.585}
+      - {x: 0.39499998, y: -0.53499997}
+--- !u!114 &4747634752809638091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197463924685101521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aca7170dd2aa034589c6bb83b5850f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
