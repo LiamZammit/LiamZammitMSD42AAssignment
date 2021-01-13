@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 7f;
     [SerializeField] float Health = 10f;
 
+    [SerializeField] AudioClip playerDeathSound;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
     float xMin, xMax, yMin, yMax;
     float padding = 0.5f;
 
@@ -25,7 +28,7 @@ public class Player : MonoBehaviour
 
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -66,6 +69,14 @@ public class Player : MonoBehaviour
         //update the position of the Player
         this.transform.position = new Vector2(newXPos, -3);
 
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
+        
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
 }

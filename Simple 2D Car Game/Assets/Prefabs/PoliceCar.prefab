@@ -118,6 +118,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   objectLaserPrefab: {fileID: 2026552196273684204, guid: fa6652fe445bd264ba7d33e8aee8ff4a, type: 3}
   objectLaserSpeed: 1
+  objectShootSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
+  objectShootSoundVolume: 0.05
 --- !u!50 &6556452894370643909
 Rigidbody2D:
   serializedVersion: 4

@@ -6,6 +6,8 @@ public class ObjectShooting : MonoBehaviour
 {
     [SerializeField] float shotCounter;
 
+    [SerializeField] float health = 1f;
+
     [SerializeField] float minTimeBetweenShots = 0.5f;
 
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -13,6 +15,10 @@ public class ObjectShooting : MonoBehaviour
     [SerializeField] GameObject objectLaserPrefab;
 
     [SerializeField] float objectLaserSpeed = 0.3f;
+
+    [SerializeField] AudioClip objectDeathSound;
+    [SerializeField] [Range(0, 1)] float objectDeathSoundVolume = 0.75f;
+
 
 
 
