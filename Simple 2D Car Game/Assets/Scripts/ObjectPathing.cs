@@ -5,9 +5,13 @@ using UnityEngine;
 public class ObjectPathing : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
-    
 
     [SerializeField] WaveConfig waveConfig;
+
+    [SerializeField] AudioClip pointGainSound;
+    [SerializeField] [Range(0, 1)] float pointGainSoundVolume = 0.75f;
+
+    int scoreValue = 5;
 
     //saves the waypoint in which we want to go
     int waypointIndex = 0;
@@ -52,6 +56,10 @@ public class ObjectPathing : MonoBehaviour
         //if enemy reaches last waypoint
         else
         {
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
+
+            AudioSource.PlayClipAtPoint(pointGainSound, Camera.main.transform.position, pointGainSoundVolume);
+
             Destroy(gameObject);
         }
     }

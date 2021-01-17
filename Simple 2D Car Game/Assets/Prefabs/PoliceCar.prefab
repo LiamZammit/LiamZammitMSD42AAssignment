@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6556452894370643909}
   - component: {fileID: 725750638980643774}
   - component: {fileID: 4747634752809638091}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PoliceCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 973f3ca61d1c1fc4db4acc52c4eb0edd, type: 2}
+  pointGainSound: {fileID: 8300000, guid: 29f76836211987f4b9b7e28acc736c2b, type: 3}
+  pointGainSoundVolume: 0.75
 --- !u!114 &-1860522839466319585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,12 +116,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotCounter: 0
+  health: 1
   minTimeBetweenShots: 0.5
   maxTimeBetweenShots: 3
   objectLaserPrefab: {fileID: 2026552196273684204, guid: fa6652fe445bd264ba7d33e8aee8ff4a, type: 3}
-  objectLaserSpeed: 1
-  objectShootSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
-  objectShootSoundVolume: 0.05
+  objectLaserSpeed: 5
+  objectDeathSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
+  objectDeathSoundVolume: 0.06
+  shoot: 1
+  deathVFX: {fileID: 4671916803641986824, guid: 618b548fdefb1e24fa85744f65a59735, type: 3}
+  explosionDuration: 0.5
 --- !u!50 &6556452894370643909
 Rigidbody2D:
   serializedVersion: 4

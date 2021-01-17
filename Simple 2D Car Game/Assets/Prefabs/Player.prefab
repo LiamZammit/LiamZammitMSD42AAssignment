@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 583624983893166231}
   - component: {fileID: -6743980958131113672}
   - component: {fileID: 5758290040526486501}
-  m_Layer: 0
+  - component: {fileID: -5488793907465109460}
+  - component: {fileID: 6782551743798035532}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  Health: 10
+  Health: 50
   playerDeathSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
-  playerDeathSoundVolume: 0.75
+  playerDeathSoundVolume: 0.3
+  playerHitSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
+  playerHitSoundVolume: 0.015
+  deathVFX: {fileID: 4671916803641986824, guid: 618b548fdefb1e24fa85744f65a59735, type: 3}
+  explosionDuration: 1
 --- !u!60 &5758290040526486501
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -154,3 +160,37 @@ PolygonCollider2D:
       - {x: 0.53499997, y: -1.26}
       - {x: 0.655, y: -1.17}
       - {x: 0.705, y: -0.89}
+--- !u!114 &-5488793907465109460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738109082405989299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aca7170dd2aa034589c6bb83b5850f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!50 &6782551743798035532
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738109082405989299}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

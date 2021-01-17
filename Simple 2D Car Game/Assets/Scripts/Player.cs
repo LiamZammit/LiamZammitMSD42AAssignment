@@ -6,10 +6,16 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 7f;
-    [SerializeField] float Health = 10f;
+    [SerializeField] int Health = 50;
 
     [SerializeField] AudioClip playerDeathSound;
     [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
+    [SerializeField] AudioClip playerHitSound;
+    [SerializeField] [Range(0, 1)] float playerHitSoundVolume = 0.75f;
+
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
 
     float xMin, xMax, yMin, yMax;
     float padding = 0.5f;
@@ -22,12 +28,19 @@ public class Player : MonoBehaviour
 
     }
 
+    public int GetHealth()
+    {
+        return Health;
+    }
+
     private void ProcessHit(DamageDealer dmgDealer)
     {
         Health -= dmgDealer.GetDamage();
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
 
         if (Health <= 0)
         {
+            Health = 0;
             Die();
         }
     }
@@ -77,6 +90,10 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
 
         FindObjectOfType<Level>().LoadGameOver();
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        Destroy(explosion, explosionDuration);
     }
 
 }

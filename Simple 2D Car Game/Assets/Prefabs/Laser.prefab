@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -5871790175445876378}
   - component: {fileID: -6411388541736625496}
   - component: {fileID: -2448322289086495741}
-  m_Layer: 0
+  - component: {fileID: -2216036755589677160}
+  m_Layer: 9
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026552196273684204}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -135,3 +136,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!114 &-2216036755589677160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026552196273684204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a8de5cc99c2534e9f872c56aa24168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  health: 1
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 1
+  objectLaserPrefab: {fileID: 2026552196273684204}
+  objectLaserSpeed: 1
+  objectDeathSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
+  objectDeathSoundVolume: 0
+  shoot: 0
+  deathVFX: {fileID: 4671916803641986824, guid: 618b548fdefb1e24fa85744f65a59735, type: 3}
+  explosionDuration: 0.001

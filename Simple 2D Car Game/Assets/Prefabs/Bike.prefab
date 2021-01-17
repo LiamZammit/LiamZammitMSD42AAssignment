@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 705542471213316833}
   - component: {fileID: 7197596633246980814}
   - component: {fileID: 2833117928819537783}
-  - component: {fileID: 4144948308420240780}
   - component: {fileID: -8001713299365679741}
-  - component: {fileID: 4177956788618690958}
   - component: {fileID: -6794879270197999591}
-  m_Layer: 0
+  - component: {fileID: -2979869457805759092}
+  - component: {fileID: 8862699526320938213}
+  m_Layer: 10
   m_Name: Bike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,19 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: b7db4dacad4d7414b96f95bb54d24914, type: 2}
---- !u!114 &4144948308420240780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147823119301831854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aca7170dd2aa034589c6bb83b5850f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
+  pointGainSound: {fileID: 8300000, guid: 29f76836211987f4b9b7e28acc736c2b, type: 3}
+  pointGainSoundVolume: 0.75
 --- !u!60 &-8001713299365679741
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -188,19 +177,6 @@ PolygonCollider2D:
       - {x: 0.16499999, y: -1.3399999}
       - {x: 0.405, y: -1.1999999}
       - {x: 0.465, y: -1.01}
---- !u!114 &4177956788618690958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147823119301831854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aca7170dd2aa034589c6bb83b5850f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!50 &-6794879270197999591
 Rigidbody2D:
   serializedVersion: 4
@@ -222,3 +198,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2979869457805759092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147823119301831854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a8de5cc99c2534e9f872c56aa24168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  health: 1
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 3
+  objectLaserPrefab: {fileID: 2026552196273684204, guid: fa6652fe445bd264ba7d33e8aee8ff4a, type: 3}
+  objectLaserSpeed: 0.3
+  objectDeathSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
+  objectDeathSoundVolume: 0.06
+  shoot: 0
+  deathVFX: {fileID: 4671916803641986824, guid: 618b548fdefb1e24fa85744f65a59735, type: 3}
+  explosionDuration: 0.5
+--- !u!114 &8862699526320938213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147823119301831854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aca7170dd2aa034589c6bb83b5850f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

@@ -19,6 +19,11 @@ public class ObjectShooting : MonoBehaviour
     [SerializeField] AudioClip objectDeathSound;
     [SerializeField] [Range(0, 1)] float objectDeathSoundVolume = 0.75f;
 
+    [SerializeField] bool shoot;
+
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
 
 
 
@@ -48,10 +53,41 @@ public class ObjectShooting : MonoBehaviour
 
     private void ObjectFire()
     {
-        GameObject objectLaser = Instantiate(objectLaserPrefab, transform.position, Quaternion.identity) as GameObject;
+        if (shoot == true)
+        {
+            GameObject objectLaser = Instantiate(objectLaserPrefab, transform.position, Quaternion.identity) as GameObject;
 
-        objectLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -objectLaserSpeed);
+            objectLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -objectLaserSpeed);
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        if(dmgDealer != null)
+        {
+            ProccessHit(dmgDealer);
+        }
+    }
+
+    private void ProccessHit(DamageDealer dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        Destroy(explosion, explosionDuration);
     }
 
 }

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: -6677127944992453767}
   - component: {fileID: -6627464924636505940}
   - component: {fileID: -4813735473231316289}
-  m_Layer: 0
+  - component: {fileID: -7104423141599102068}
+  m_Layer: 10
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: eb6ca22b130cf38439dca8bb80f2163f, type: 2}
+  pointGainSound: {fileID: 8300000, guid: 29f76836211987f4b9b7e28acc736c2b, type: 3}
+  pointGainSoundVolume: 0.75
 --- !u!60 &-6677127944992453767
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -211,3 +214,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+--- !u!114 &-7104423141599102068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728745550522364763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a8de5cc99c2534e9f872c56aa24168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  health: 1
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 3
+  objectLaserPrefab: {fileID: 0}
+  objectLaserSpeed: 0.3
+  objectDeathSound: {fileID: 8300000, guid: d2936fcd7ca557740907ae5a98b95149, type: 3}
+  objectDeathSoundVolume: 0.06
+  shoot: 0
+  deathVFX: {fileID: 4671916803641986824, guid: 618b548fdefb1e24fa85744f65a59735, type: 3}
+  explosionDuration: 0.5

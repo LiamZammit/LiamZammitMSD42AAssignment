@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
+
     int score = 0;
 
     private void Awake()
@@ -22,6 +23,22 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    //get the value of score
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public void AddToScore(int scoreValue)
+    {
+        score += scoreValue;
+    }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
     }
 
 }
