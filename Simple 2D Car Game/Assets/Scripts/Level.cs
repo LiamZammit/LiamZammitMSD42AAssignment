@@ -12,11 +12,25 @@ public class Level : MonoBehaviour
         yield return new WaitForSeconds(delayInSeconds);
         SceneManager.LoadScene("GameOver");
     }
+    IEnumerator winWaitAndLoad()
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        SceneManager.LoadScene("Win");
+    }
 
     public void LoadGame()
     {
         SceneManager.LoadScene("SimpleCarGame");
-
+        GameSession gs = FindObjectOfType<GameSession>();
+        if (gs != null)
+        {
+            //reset the Game from the beginning
+            gs.ResetGame();
+        }
+        else
+        {
+            print("GameSession is null");
+        }
     }
 
     public void LoadGameOver()
@@ -27,6 +41,11 @@ public class Level : MonoBehaviour
     public void LoadStartMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LoadWin()
+    {
+        StartCoroutine(winWaitAndLoad());
     }
 
     public void QuitGame()

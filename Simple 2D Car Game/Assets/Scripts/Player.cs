@@ -58,8 +58,8 @@ public class Player : MonoBehaviour
         Camera gameCamera = Camera.main;
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding; //xMin = 0 according to the camera
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding; //xMax = 1 according to the camera
-       
-       
+
+
 
 
     }
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
-        
+
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
 
         FindObjectOfType<Level>().LoadGameOver();
@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
 
         Destroy(explosion, explosionDuration);
+
     }
 
 }
